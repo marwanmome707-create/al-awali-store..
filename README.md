@@ -40,14 +40,3 @@ npm.cmd start
 6. انشر الموقع على استضافة تدعم Node.js وHTTPS، واختبر الدفع في وضع الاختبار أولًا.
 
 لا تضع مفاتيح الدفع أو كلمات المرور في `public/app.js` أو أي ملف داخل `public`.
-
-
-## Gaming categories
-This demo includes PC components, accessories, consoles, demo digital listings, chairs/desks, networking, streaming gear, and bundles. Prices and stock are sample data and should be verified before real sales. Digital items are demo listings only.
-
-## Deploy on Render
-- Build command: `npm install`
-- Start command: `npm start`
-- The app binds to `0.0.0.0` and uses `process.env.PORT`.
-- Orders are currently saved to a local JSON file. On free hosting, local files may be lost during restarts or redeploys; use a persistent database before accepting real customer orders.
-- Checkout is demo-only; no payment is collected.
