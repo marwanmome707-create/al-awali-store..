@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10101a">
+  <meta name="description" content="Al Awali Store — gaming gear and accessories">
+  <title>Al Awali Store | متجر العوالي</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="Al Awali Store home"><span class="brand-mark">A</span><span>AL AWALI <b>STORE</b></span></a>
+    <nav><a href="#products" data-i18n="shop">المتجر</a><a href="#about" data-i18n="about">عن المتجر</a></nav>
+    <div class="top-actions">
+      <button id="languageBtn" class="ghost" type="button">English</button>
+      <button id="cartBtn" class="cart-button" type="button"><span data-i18n="cart">السلة</span> <span id="cartCount" class="count">0</span></button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <span class="eyebrow" data-i18n="eyebrow">جهّز نفسك للفوز</span>
+        <h1 data-i18n="heroTitle">ارفع مستوى<br><span>تجربة القيمنق</span></h1>
+        <p data-i18n="heroText">إكسسوارات، ملحقات، وباقات للاعبين — كل تجهيزاتك في مكان واحد.</p>
+        <a class="primary-link" href="#products" data-i18n="browse">تصفح المنتجات <span>↙</span></a>
+        <div class="hero-stats"><div><strong>20+</strong><small data-i18n="productsLabel">منتجات للبدء</small></div><div><strong>24/7</strong><small data-i18n="onlineLabel">تسوق أونلاين</small></div></div>
+      </div>
+      <div class="hero-art" aria-hidden="true"><div class="glow"></div><div class="controller">🎮</div><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><span class="float-tag tag-one">LEVEL UP</span><span class="float-tag tag-two">GG WP</span></div>
+    </section>
+
+    <section class="section" id="products">
+      <div class="section-heading"><div><span class="eyebrow" data-i18n="curated">اختيارات اللاعبين</span><h2 data-i18n="featured">منتجات مميزة</h2></div><div class="filters"><input id="searchInput" type="search" data-i18n-placeholder="search" placeholder="ابحث عن منتج..."><select id="categorySelect" aria-label="Category"><option value="all" data-i18n="all">كل المنتجات</option><option value="pc" data-i18n="pc">الكمبيوتر وقطعه</option><option value="accessories" data-i18n="accessories">الإكسسوارات</option><option value="consoles" data-i18n="consoles">المنصات وملحقاتها</option><option value="digital" data-i18n="digital">الألعاب والمنتجات الرقمية</option><option value="chairs" data-i18n="chairs">الكراسي والمكاتب</option><option value="network" data-i18n="network">الشبكات والإنترنت</option><option value="streaming" data-i18n="streaming">البث وصناعة المحتوى</option><option value="bundles" data-i18n="bundles">الباقات</option></select></div></div>
+      <div id="productGrid" class="product-grid"><div class="loading">Loading…</div></div>
+    </section>
+
+    <section class="banner" id="about"><div class="banner-icon">✦</div><div><span class="eyebrow" data-i18n="built">صُنع للاعبين</span><h2 data-i18n="bannerTitle">معداتك. لعبتك. مستواك.</h2><p data-i18n="bannerText">متجر تجريبي قابل للتطوير وإضافة بوابة دفع وشحن حقيقيين لاحقًا.</p></div><a href="#products" class="banner-arrow" aria-label="Shop">↙</a></section>
+  </main>
+
+  <footer><a class="brand" href="#"><span class="brand-mark">A</span><span>AL AWALI <b>STORE</b></span></a><p data-i18n="footer">متجر القيمنق الخاص بك — نسخة تجريبية أولية.</p><small>© <span id="year"></span> Al Awali Store</small></footer>
+
+  <div id="cartOverlay" class="overlay" hidden>
+    <button class="scrim" id="closeCartScrim" aria-label="Close cart"></button>
+    <aside class="cart-panel" aria-label="Shopping cart">
+      <div class="panel-heading"><h2 data-i18n="yourCart">سلة مشترياتك</h2><button id="closeCart" class="icon-button" aria-label="Close">✕</button></div>
+      <div id="cartItems" class="cart-items"></div>
+      <div class="cart-total"><span data-i18n="total">الإجمالي</span><strong id="cartTotal">0 ر.س</strong></div>
+      <form id="checkoutForm" class="checkout-form">
+        <h3 data-i18n="checkout">إتمام الطلب التجريبي</h3>
+        <label><span data-i18n="name">الاسم</span><input name="name" required minlength="2" maxlength="100" autocomplete="name"></label>
+        <label><span data-i18n="phone">رقم الجوال</span><input name="phone" required minlength="8" maxlength="30" autocomplete="tel"></label>
+        <label><span data-i18n="email">البريد الإلكتروني (اختياري)</span><input name="email" type="email" maxlength="120" autocomplete="email"></label>
+        <button class="primary-button" type="submit" data-i18n="placeOrder">إرسال الطلب التجريبي</button>
+        <p class="disclaimer" data-i18n="paymentNote">تنبيه: هذا نموذج تجريبي؛ لن يتم خصم أي مبلغ. الدفع الإلكتروني غير مربوط بعد.</p>
+      </form>
+      <div id="checkoutMessage" role="status" class="message"></div>
+    </aside>
+  </div>
+  <script src="/app.js" defer></script>
+</body>
+</html>
